@@ -1,3 +1,6 @@
+This is my practice project, I amde it to apply learnings of react and Material UI to understand the application of react hooks useState and useEffect, 
+and Cards from Material UI, here I learnt how to use predefined codes and in our frontend.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -10,3 +13,4 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
