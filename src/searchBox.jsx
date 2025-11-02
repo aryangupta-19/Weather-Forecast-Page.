@@ -3,9 +3,9 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import "./searchBox.css";
 
-export default function searchBox({updateInfo}){
+export default function searchBox({updateInfo}){  // update info weather.jsx mai function hai jisko ham yahan se call lagayenge with new info 
 
-    let [city, setCity] = useState("");
+    let [city, setCity] = useState(""); // yeh city set karne ke liye jo form mai se aygi vlaue mai city dedena 
     let [error, setError] = useState(false);
 
     const API_URL = "https://api.openweathermap.org/data/2.5/weather";
@@ -14,6 +14,7 @@ export default function searchBox({updateInfo}){
     let getWeatherInfo = async () => {
 
         try{
+            // fetch(api url ?q=city&appid=API_key&unit=metric)
             let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`); // fetch data 
             // convert response to json format 
             let jsonResponse = await response.json();
@@ -38,16 +39,16 @@ export default function searchBox({updateInfo}){
     } 
 
 
-    let handleChange = (event) =>{
+    let handleChange = (event) =>{  // it will be setting city name 
         setCity(event.target.value);
     }
 
     let handleSubmit = async (event) => {
         try{
-            event.preventDefault();
+            event.preventDefault();  // to remove property of getting hidden in seconds 
             console.log(city);
             setCity("");
-            let newInfo =  await getWeatherInfo();
+            let newInfo =  await getWeatherInfo();  // getweather new info return kr rha hoga 
             updateInfo(newInfo);
         }catch(err){
             setError(true);
@@ -66,7 +67,7 @@ export default function searchBox({updateInfo}){
                 <Button variant="contained" type="submit" onClick={handleSubmit} >
                     Search
                 </Button>
-                {error && <p style={{color:"red"}}> No!!1 Such place exists...</p>}
+                {error && <p style={{color:"red", fontSize:"larger", fontWeight:"900"}}> No!! Such place exists...</p>}
             </form>
         </div>
     );

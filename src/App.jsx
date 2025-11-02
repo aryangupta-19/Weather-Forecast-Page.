@@ -1,9 +1,9 @@
 
 import './App.css'
 
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Alert from '@mui/material/Alert';
+// import Button from '@mui/material/Button';
+// import DeleteIcon from '@mui/icons-material/Delete';
+// import Alert from '@mui/material/Alert';
 
 import WeatherApp from "./weatherApp";
 
@@ -40,7 +40,7 @@ function App() {
 
 export default App
 
-
+ 
 // ab button ko dispoay krwane ke liye phle import karwana padta hai (imp)-> button tabhi show hoga jab koi text like click me 
 // and variant given hoga button ko 
 
