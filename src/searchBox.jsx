@@ -55,7 +55,6 @@ export default function searchBox({updateInfo}){  // update info weather.jsx mai
         }
     }
 
-
     return(
         <div className="searchBox">
             {/* <h3>Search for Weather</h3> */}

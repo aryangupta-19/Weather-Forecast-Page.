@@ -11,7 +11,7 @@ import "./infoBox.css";
 
 export default function infoBox({info}){
 
-    const initialImgUrl = "https://images.unsplash.com/photo-1643659345110-716ff9be3a9f?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+    // const initialImgUrl = "https://images.unsplash.com/photo-1643659345110-716ff9be3a9f?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
     const Hot_Url = "https://images.unsplash.com/photo-1615752592676-f6bd84f9419d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670";
     const Cold_Url = "https://images.unsplash.com/photo-1418985991508-e47386d96a71?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2670";
     const Rain_Url = "https://images.unsplash.com/photo-1519692933481-e162a57d6721?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3540";
@@ -37,7 +37,8 @@ export default function infoBox({info}){
                         height="140"
                         // image={initialImgUrl}
                         image={
-                            info.humidity>80? Rain_Url: (info.temp>15)? Hot_Url: Cold_Url}
+                            info.humidity>80? Rain_Url: (info.temp>20)? Hot_Url: Cold_Url
+                        }
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
@@ -54,7 +55,7 @@ export default function infoBox({info}){
                         <p>Min Temp  = {info.temp_max}&deg;c</p>
                         <p>The weather Feels Like  = {info.feels_like}&deg;c</p>
                         <p>
-                            The weather can be descibed as = <i>{info.weather}</i> and feels like = {info.feels_like}&deg;c
+                            The weather can be descibed as = <i>{info.weather}</i> and feelsLike = {info.feels_like}&deg;c
                         </p>
                         </Typography>
                     </CardContent>
